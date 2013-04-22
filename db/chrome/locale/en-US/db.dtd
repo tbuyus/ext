@@ -1,0 +1,40 @@
+<!ENTITY db.labelToggle "Togg0le0 Text Augmentation">
+<!ENTITY db.labelIPANow "IPA Approx. ">
+<!ENTITY db.labelRemoveInternalVowelsNow "No Vow0els">
+<!ENTITY db.labelBlocksNow "Colored Blocks1">
+<!ENTITY db.labelTobsNow "Reform 1">
+<!ENTITY db.labelNotation "Notation">
+<!ENTITY db.labelAugmentNow "Augment">
+<!ENTITY db.labelScheme "Sch0eme">
+<!ENTITY db.labelSchemes "Sch0emes">
+<!ENTITY db.labelOptions "Options">
+<!ENTITY db.labelSchemeKeys "Keys">
+<!ENTITY db.labelAugSounds "Augmented Sounds">
+<!ENTITY db.labelAugmentedAlphabet "Augmented Alphabet">
+<!ENTITY db.labeIIPASounds "IPA Sounds">
+<!ENTITY db.labelIPAApprox "IPA Approx">
+<!ENTITY db.labelColoredBlockLetters "Colored Block Alphabet">
+<!ENTITY db.labelColoredBlocks "Colored Blocks">
+<!ENTITY db.labelNormalLayout "Normal Layout">
+<!ENTITY db.labelLayout "Layout">
+<!ENTITY db.labelMouseGloss "Mouse Gloss">
+<!ENTITY db.labeIReverseMouseGloss "Reverse Gloss">
+<!ENTITY db.labelColumns "Columns">
+<!ENTITY db.labelLowerCutOff "Lower Cut Off">
+<!ENTITY db.labelUpperCutOff "Upper Cut Off">
+<!ENTITY db.labelReloadPage "Reset">
+<!ENTITY db.labelAbout "About">
+<!ENTITY db.labelVowels "Vowels">
+<!ENTITY db.labelConsonants "Consonants">
+<!ENTITY db.labelSilentLetters "Silent Letters">
+<!ENTITY db.labelGrey "Grey">
+<!ENTITY db.labelSchwa "Schwa">
+<!ENTITY db.labelKey "Key">
+<!ENTITY db.labelGO "GO!">
+<!ENTITY db.labelRESET "RESET!">
+
+
+
+
+
+

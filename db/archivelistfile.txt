@@ -1,0 +1,5 @@
+chrome.manifest
+install.rdf
+spell.sqlite
+chrome\*
+defaults\*

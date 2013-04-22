@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://db/skin/overlay.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://db/locale/db.dtd">
+<window id="notation-window"  
+   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" 
+   xmlns:html="http://www.w3.org/1999/xhtml"        
+   title="English Augmenter" screenX="250" screenY="250" onload="go();" >
+  <script src="processIndividualWords.js"/>
+  <script src="parseTextNodes.js"/>
+  <script src="ipa.js"/>
+  <script src="reform1.js"/>
+  <script src="fonts.js"/>
+  <script src="overlay.js"/>
+  <vbox>
+    <tabbox>
+	<tabs>
+	    <tab label="settings"/>
+	    <tab label="keys"/>
+	 </tabs>
+	 <tabpanels>
+	   <tabpanel>
+    <hbox>
+    <groupbox>
+         <caption>&db.labelSchemes;</caption>
+         <radiogroup id="db-Scheme" persist="selectedItem">
+           <radio id="db-Augment" accesskey="A" label="&db.labelAugmentNow;" />
+           <radio id="db-IPA" accesskey="I" label="&db.labelIPANow;" /> 
+           <radio id="db-NoVowels" accesskey="V" label="&db.labelRemoveInternalVowelsNow;" /> 
+           <radio id="db-Blocks" accesskey="B" label="&db.labelBlocksNow;" /> 
+           <radio id="db-Tobs" accesskey="R" label="&db.labelTobsNow;" /> 
+        </radiogroup>
+     </groupbox>
+   <vbox>
+     <groupbox>
+          <caption>&db.labelOptions;</caption>
+          <radiogroup id="db-Options" >
+           <radio id="db-LowerCutOff" accesskey="L" label="&db.labelLowerCutOff;: 0" oncommand="this.label='lower cut off: '+prompt('enter the lower cut off!');"/>
+           <radio id="db-UpperCutOff" accesskey="U" label="&db.labelUpperCutOff;: 200000" oncommand="this.label='upper cut off: '+prompt('enter the upper  cut off!');"/>
+          </radiogroup>
+	</groupbox>
+	<groupbox>
+	    <caption>&db.labelLayout;</caption>
+ 	  <radiogroup id="db-Layout" persist="selectedItem">
+          <radio  id="db-NormalLayout"  accesskey="N" type="radio" name="layout" label="&db.labelNormalLayout;"  />
+           <radio  id="db-GlossLayout"   accesskey="G" type="radio" name="layout" label="&db.labelMouseGloss;" />
+           <radio  id="db-InverseGlossLayout"   accesskey="I" type="radio" name="layout" label="&db.labeIReverseMouseGloss;" />
+           <radio  id="db-ColumnsLayout" accesskey="C" type="radio" name="layout" label="&db.labelColumns;" />
+         </radiogroup>
+     </groupbox>
+    </vbox>
+    </hbox>
+       </tabpanel>
+       
+       
+       <tabpanel>
+            <tabbox>
+        <tabs>
+          <tab label="&db.labelAugmentedAlphabet;"/>
+          <tab label="&db.labelIPAApprox;"/>
+          <tab label="&db.labelColoredBlocks;"/>  
+        </tabs>
+        <tabpanels>
+	   <tabpanel>
+	   <tabbox>
+  <tabs>
+    <tab label="&db.labelVowels;" />
+    <tab label="&db.labelConsonants;" />
+  </tabs>
+<tabpanels>
+    <tabpanel id="first">
+  
+  <vbox align="center">
+      <hbox align="left">
+         <description>&db.labelSilentLetters;</description>
+         <button id="db-lcurly" label="èìòùħ-(&db.labelGrey;)"/>
+         <description>&db.labelSchwa;</description>
+        <button id="db-@" label="á,é,í,ó,ú" oncommand="speak(event);"/>
+      </hbox>  
+
+ 
+    <hbox align="left">
+      <button id="db-lcurly" label="a" oncommand="speak(event);"/>
+      <button id="db-e" label="e,ã" oncommand="speak(event);"/>
+      <button id="db-I" label="i,ė,ų" oncommand="speak(event);"/>
+    </hbox>  
+  
+    <hbox align="left">
+     <button id="db-o" label="o" oncommand="speak(event);"/>
+     <button id="db-VV" label="u,ő" oncommand="speak(event);"/>
+     <button id="db-UU" label="ō,ū" oncommand="speak(event);"/>
+    </hbox>
+
+    <hbox align="left">
+     <button id="db-idots" label="ê,ï,ɥ " oncommand="speak(event);"/>
+     <button id="db-eI" label="â" oncommand="speak(event);"/>
+    </hbox>
+
+   <hbox align="left">
+     <button id="db-aI" label="î,ŷ" oncommand="speak(event);"/>
+     <button id="db-OI" label="ǒ" oncommand="speak(event);"/>
+    </hbox>
+
+     <hbox align="left">
+     <button id="db-udots" label="ö,ü,ë-û" oncommand="speak(event);"/>
+     <button id="db-@U" label="ôÔ" oncommand="speak(event);"/>
+     <button id="db-aU" label="õ" oncommand="speak(event);"/>
+    </hbox>
+ 
+    <hbox align="left">
+     <button id="db-3dots" label="ŕ" oncommand="speak(event);"/>
+     <button id="db-Adots" label="āĀ" oncommand="speak(event);"/>
+     <button id="db-Odots" label="ø,åÅ" oncommand="speak(event);"/>
+    </hbox>
+
+    <hbox align="left">
+     <button id="db-I@" label="iŕ,ėŕ" oncommand="speak(event);"/>
+     <button id="db-e@" label="eŕ,ãŕ" oncommand="speak(event);"/>
+     <button id="db-U@" label="yŕ" oncommand="speak(event);"/>
+    </hbox>
+   
+
+  </vbox>
+
+ </tabpanel>
+    <tabpanel id="second">
+  
+
+  <vbox align="center">
+
+    <vbox align="center"> 
+        
+      <hbox align="left">
+        <button id="db-b" label="b" oncommand="speak(event);"/>
+        <button id="db-p" label="p" oncommand="speak(event);"/>
+        <button id="db-t" label="tT,ð" oncommand="speak(event);"/>
+      </hbox>
+
+     <hbox  align="left">
+       <button id="db-d" label="dD" oncommand="speak(event);"/>
+       <button id="db-g" label="gG" oncommand="speak(event);"/>
+       <button id="db-k" label="k" oncommand="speak(event);"/>
+     </hbox>
+    
+   </vbox>
+        
+    <hbox  align="left">
+
+     <button id="db-tS" label="¢ť" oncommand="speak(event);"/>
+     <button id="db-dZ" label="j,ĝ" oncommand="speak(event);"/>
+
+    </hbox>
+   
+   <vbox align="center"> 
+
+    <hbox align="left">
+      <button id="db-f" label="fF" oncommand="speak(event);"/>
+      <button id="db-h" label="hH" oncommand="speak(event);"/>
+      <button id="db-s" label="s,ç" oncommand="speak(event);"/>
+    </hbox>
+
+    <hbox align="left">
+      <button id="db-SS" label="$,ţ" oncommand="speak(event);"/>   
+      <button id="db-TT" label="ҭ" oncommand="speak(event);"/>
+      <button id="db-DD" label="τ" oncommand="speak(event);"/>
+    </hbox>
+
+    <hbox align="left">
+      <button id="db-v" label="vV,ƒ" oncommand="speak(event);"/>
+      <button id="db-z" label="z,ś" oncommand="speak(event);"/>
+      <button id="db-ZZ" label="zye" oncommand="speak(event);"/>
+    </hbox>
+
+  </vbox>   
+   <vbox align="center"> 
+
+    <hbox align="left">
+      <button id="db-j" label="y,ǐ" oncommand="speak(event);"/>
+      <button id="db-l" label="lL" oncommand="speak(event);"/>
+      <button id="db-m" label="mM" oncommand="speak(event);"/>
+  
+   </hbox>
+
+    <hbox align="left">
+      <button id="db-n" label="nN" oncommand="speak(event);"/>
+      <button id="db-NN" label="ñ" oncommand="speak(event);"/>   
+      <button id="db-r" label="rR" oncommand="speak(event);"/>
+      <button id="db-w" label="w,ǔ" oncommand="speak(event);"/>
+    </hbox>
+
+ 
+  </vbox>   
+
+
+  </vbox>
+</tabpanel>
+  </tabpanels>
+</tabbox>
+           </tabpanel>
+           <tabpanel>
+<tabbox>
+  <tabs>
+    <tab label="&db.labelVowels;" />
+    <tab label="&db.labelConsonants;" />
+  </tabs>
+<tabpanels>
+    <tabpanel id="first">
+   
+  <vbox align="center">
+ 
+    <hbox align="left">
+      <button id="db-lcurly" label="æ" oncommand="speak(event);"/>
+      <button id="db-e" label="ɛ" oncommand="speak(event);"/>
+      <button id="db-I" label="I" oncommand="speak(event);"/>
+    </hbox>  
+  
+    <hbox align="left">
+     <button id="db-o" label="ɒ" oncommand="speak(event);"/>
+     <button id="db-VV" label="ʌ" oncommand="speak(event);"/>
+     <button id="db-UU" label="ʊ" oncommand="speak(event);"/>
+    </hbox>
+
+    <hbox align="left">
+      <button id="db-@" label="ə" oncommand="speak(event);"/>
+    </hbox>
+
+    <hbox align="left">
+     <button id="db-idots" label="iː " oncommand="speak(event);"/>
+     <button id="db-eI" label="eɪ" oncommand="speak(event);"/>
+    </hbox>
+
+   <hbox align="left">
+     <button id="db-aI" label="aɪ" oncommand="speak(event);"/>
+     <button id="db-OI" label="ɔɪ" oncommand="speak(event);"/>
+    </hbox>
+
+     <hbox align="left">
+     <button id="db-udots" label="uː" oncommand="speak(event);"/>
+     <button id="db-@U" label="əʊ" oncommand="speak(event);"/>
+     <button id="db-aU" label="aʊ" oncommand="speak(event);"/>
+    </hbox>
+ 
+    <hbox align="left">
+     <button id="db-3dots" label="ɜː(ɹ)" oncommand="speak(event);"/>
+     <button id="db-Adots" label="ɑː" oncommand="speak(event);"/>
+     <button id="db-Odots" label="ɔː" oncommand="speak(event);"/>
+    </hbox>
+
+    <hbox align="left">
+     <button id="db-I@" label="ɪə(ɹ)" oncommand="speak(event);"/>
+     <button id="db-e@" label="eə(ɹ)" oncommand="speak(event);"/>
+     <button id="db-U@" label="(j)ʊə(ɹ)" oncommand="speak(event);"/>
+    </hbox>
+   
+
+  </vbox>
+
+  </tabpanel>
+    <tabpanel id="second">
+
+
+  <vbox align="center">
+    
+    <vbox align="center"> 
+        
+      <hbox align="left">
+        <button id="db-b" label="b" oncommand="speak(event);"/>
+        <button id="db-p" label="p" oncommand="speak(event);"/>
+        <button id="db-t" label="t" oncommand="speak(event);"/>
+      </hbox>
+
+     <hbox  align="left">
+       <button id="db-d" label="d" oncommand="speak(event);"/>
+       <button id="db-g" label="g" oncommand="speak(event);"/>
+       <button id="db-k" label="k" oncommand="speak(event);"/>
+     </hbox>
+    
+   </vbox>
+        
+    <hbox  align="left">
+
+     <button id="db-tS" label="tʃ" oncommand="speak(event);"/>
+     <button id="db-dZ" label="dʒ" oncommand="speak(event);"/>
+
+    </hbox>
+   
+   <vbox align="center"> 
+
+    <hbox align="left">
+      <button id="db-f" label="f" oncommand="speak(event);"/>
+      <button id="db-h" label="h" oncommand="speak(event);"/>
+      <button id="db-s" label="s" oncommand="speak(event);"/>
+    </hbox>
+
+    <hbox align="left">
+      <button id="db-SS" label="ʃ" oncommand="speak(event);"/>   
+      <button id="db-TT" label="θ" oncommand="speak(event);"/>
+      <button id="db-DD" label="ð" oncommand="speak(event);"/>
+    </hbox>
+
+    <hbox align="left">
+      <button id="db-v" label="v" oncommand="speak(event);"/>
+      <button id="db-z" label="z" oncommand="speak(event);"/>
+      <button id="db-ZZ" label="ʒ" oncommand="speak(event);"/>
+    </hbox>
+
+  </vbox>   
+   <vbox align="center"> 
+
+    <hbox align="left">
+      <button id="db-j" label="j" oncommand="speak(event);"/>
+      <button id="db-l" label="l" oncommand="speak(event);"/>
+      <button id="db-m" label="m" oncommand="speak(event);"/>
+  
+   </hbox>
+
+    <hbox align="left">
+      <button id="db-n" label="n" oncommand="speak(event);"/>
+      <button id="db-NN" label="ŋ" oncommand="speak(event);"/>   
+      <button id="db-r" label="r" oncommand="speak(event);"/>
+      <button id="db-w" label="w" oncommand="speak(event);"/>
+    </hbox>
+
+ 
+  </vbox>   
+
+
+  </vbox>
+</tabpanel>
+  </tabpanels>
+</tabbox>
+           </tabpanel>
+           <tabpanel>
+	   <html:table border="1" cellspacing="0" style="text-align:center;">
+  <html:tr>
+     <html:td>&db.labelKey;</html:td>
+            <html:td>
+                 <vbox>
+                   <description>a</description>
+                   <description>b</description>
+                   <description>c</description>
+                 </vbox>  
+            </html:td>
+            <html:td>
+                 <vbox>
+                   <description>d</description>
+                   <description>e</description>
+                   <description>f</description>
+                 </vbox>  
+            </html:td>
+            <html:td>
+                 <vbox>
+                   <description>g</description>
+                   <description>h</description>
+                   <description>i</description>
+                 </vbox>  
+            </html:td>
+            <html:td>
+                 <vbox>
+                   <description>j</description>
+                   <description>k</description>
+                   <description>l</description>
+                 </vbox>  
+            </html:td>
+            <html:td>
+                 <vbox>
+                   <description>m</description>
+                   <description>n</description>
+                   <description>o</description>
+                 </vbox>  
+            </html:td>
+            <html:td>
+                 <vbox>
+                   <description>p</description>
+                   <description>qr</description>
+                   <description>s</description>
+                 </vbox>  
+            </html:td>
+            <html:td>
+                 <vbox>
+                   <description>t</description>
+                   <description>u</description>
+                   <description>v</description>
+                 </vbox>  
+            </html:td>
+            <html:td>
+                 <vbox>
+                   <description>w</description>
+                   <description>xy</description>
+                   <description>z</description>
+                 </vbox>  
+            </html:td>
+     </html:tr>
+  <html:tr >
+            <html:td>adgjmptw</html:td>
+            <html:td>
+                 <hbox>
+                   <description>a</description>
+                   <description class="sms1">a</description>
+                 </hbox>  
+            </html:td>
+            <html:td>
+                 <hbox>
+                   <description>d</description>
+                   <description class="sms1">d</description>
+                 </hbox>  
+            </html:td>
+            <html:td>
+                 <hbox>
+                   <description>g</description>
+                   <description class="sms1">g</description>
+                 </hbox>  
+            </html:td>
+            <html:td>
+                 <hbox>
+                   <description>j</description>
+                   <description class="sms1">j</description>
+                 </hbox>  
+            </html:td>
+            <html:td>
+                 <hbox>
+                   <description>m</description>
+                   <description class="sms1">m</description>
+                 </hbox>  
+            </html:td>
+            <html:td>
+                 <hbox>
+                   <description>p</description>
+                   <description class="sms1">p</description>
+                 </hbox>  
+            </html:td>
+            <html:td>
+                 <hbox>
+                   <description>t</description>
+                   <description class="sms1">t</description>
+                 </hbox>  
+            </html:td>
+            <html:td>
+                 <hbox>
+                   <description>w</description>
+                   <description class="sms1">w</description>
+                 </hbox>  
+            </html:td>
+</html:tr>
+  <html:tr>
+            <html:td>behkn(qr)u(xy)</html:td>
+            <html:td>
+                 <hbox>
+                   <description>b</description>
+                   <description class="sms2">b</description>
+                 </hbox>  
+            </html:td>
+            <html:td>
+                 <hbox>
+                   <description>e</description>
+                   <description class="sms2">e</description>
+                 </hbox>  
+            </html:td>
+            <html:td>
+                 <hbox>
+                   <description>h</description>
+                   <description class="sms2">h</description>
+                 </hbox>  
+            </html:td>
+            <html:td>
+                 <hbox>
+                   <description>k</description>
+                   <description class="sms2">k</description>
+                 </hbox>  
+            </html:td>
+            <html:td>
+                 <hbox>
+                   <description>n</description>
+                   <description class="sms2">n</description>
+                 </hbox>  
+            </html:td>
+            <html:td>
+                 <hbox>
+                   <description>qr</description>
+                   <description class="sms2">r</description>
+                 </hbox>  
+            </html:td>
+            <html:td>
+                 <hbox>
+                   <description>u</description>
+                   <description class="sms2">u</description>
+                 </hbox>  
+            </html:td>
+            <html:td>
+                 <hbox>
+                   <description>xy</description>
+                   <description class="sms2">x</description>
+                 </hbox>  
+            </html:td>
+</html:tr>
+  <html:tr >
+            <html:td>cfilosvz</html:td>
+            <html:td>
+                 <hbox>
+                   <description>c</description>
+                   <description class="sms3">c</description>
+                 </hbox>  
+            </html:td>
+            <html:td>
+                 <hbox>
+                   <description>f</description>
+                   <description class="sms3">f</description>
+                 </hbox>  
+            </html:td>
+            <html:td>
+                 <hbox>
+                   <description>i</description>
+                   <description class="sms3">i</description>
+                 </hbox>  
+            </html:td>
+            <html:td>
+                 <hbox>
+                   <description>l</description>
+                   <description class="sms">l</description>
+                 </hbox>  
+            </html:td>
+            <html:td>
+                 <hbox>
+                   <description>o</description>
+                   <description class="sms3">o</description>
+                 </hbox>  
+            </html:td>
+            <html:td>
+                 <hbox>
+                   <description>s</description>
+                   <description class="sms3">s</description>
+                 </hbox>  
+            </html:td>
+            <html:td>
+                 <hbox>
+                   <description>v</description>
+                   <description class="sms3">v</description>
+                 </hbox>  
+            </html:td>
+            <html:td>
+                 <hbox>
+                   <description>z</description>
+                   <description class="sms3">z</description>
+                 </hbox>  
+            </html:td>
+</html:tr>
+</html:table>
+           </tabpanel>
+        </tabpanels>
+      </tabbox>
+      </tabpanel>
+     </tabpanels>
+    </tabbox> 
+    <hbox>
+                <spacer flex="1"/>
+               <button id="db-go" label="&db.labelGO;" oncommand="doScheme(document.getElementById('db-Scheme').selectedItem.id);window.close();"/>
+               <button id="db-reset" label="&db.labelRESET;" oncommand="window.opener.content.document.location.reload();"/>
+    </hbox>
+    </vbox>
+ </window>

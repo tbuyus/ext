@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://db/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://db/locale/db.dtd">
+<overlay id="db-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	 onload="alert('firefoxOverlay.xul has just loaded');">
+  <script src="processIndividualWords.js"/>
+  <script src="parseTextNodes.js"/>
+  <script src="ipa.js"/>
+  <script src="reform1.js"/>
+  <script src="fonts.js"/>
+  <script src="overlay.js"/> 
+  <script src="foverlay.js"/> 
+  
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="db-strings" src="chrome://db/locale/db.properties"/>
+  </stringbundleset>
+
+ <menubar id="main-menubar">
+<button label="EÅug" insertbefore="help-menu" accesskey="u" oncommand="window.open('chrome://db/content/notation.xul', '', 'chrome');"/>
+</menubar>
+
+<statusbar id="status-bar">
+   <statusbarpanel id="notationstatus" label="EÅ"   />
+ </statusbar>
+ 
+</overlay>
