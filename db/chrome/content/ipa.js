@@ -49,3 +49,8 @@ function TidyIPA(t){
   t= t.replace(/([$ţć])/gi,"ʃ");
   return t.replace(/([¢ť])/gi,"ʧ");
 }
+
+//function TidyTobsScheme(t){
+//  console.log(t);
+//  return t.replace(/e/xxx/gi);
+//}

@@ -117,7 +117,6 @@ function ReformWord(word){
  value=DictionaryEntry(word);
   if(typeof(value)=="undefined"){value="#@###"+word} else {
     value=TidyTobsScheme(value);} 
- //   value=TidyIPA(value);} 
   if(typeof(wordrank)=="undefined"){wordrank=1*400000} 
   if(word.match(/[a-z][a-z][a-z]*/)){value=value.replace(/\#\@\#\#\#/,"/")}
   value=value.replace(/\/pnccc/g,"pnccc");
