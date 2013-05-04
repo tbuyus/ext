@@ -27,10 +27,12 @@ function parseTextNodes(page,func,processAtWordLevel)
         
   var str="";
   
+  //alert("hi from parseTextNodes");
+  //alert("tnodes length:=" + tNodes.snapshotLength);
   // LOOP  THROUGH DOCUMENT TEXTUAL CONTENT
   for(var i=0;i<tNodes.snapshotLength;i++){
     var node=tNodes.snapshotItem(i);
-    
+    //alert(i);
     //EXCLUDING THE TEXTUAL CONTENT INSIDE SCRIPT TAGS AND STYLE TAGS
     //AND AVOIDING UNECESSARY PROCESSING OF EMPTY NODES
     if(node.parentNode.nodeName != "SCRIPT" && node.parentNode.nodeName != "STYLE" && node.data !="" && node.parentNode.length!=0){ 

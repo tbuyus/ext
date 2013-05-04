@@ -66,21 +66,35 @@ function removeInternalVowels(t){return t.replace(/([^ ])([aeiou][aeiou]*)/gi,"$
 
 // USED BY IPA/REFORM/ & AUGMENT FUNCTIONS - (PRONUNCIATION DEPENDENT SCHEMES)
 function DictionaryEntry(word){
+  
+  ceys=wordCase(word);
   word=word.toLowerCase();
+  value=word;
+   
+//  alert("func\tDictionaryEntry\n param words= " + word);
+//  console.log("func\tprocessIndividualWords\t param somewords= " +somewords);
+
   var statement =mDBConn.createStatement("SELECT * FROM dictionary where tradspell=?1");
   statement.bindUTF8StringParameter(0, word);
+  
   while (statement.executeStep()) {
           var value =statement.getString(1);
-          var wordrank=statement.getString(2);} // use the correct function!
-          
+          var wordrank=statement.getString(2); // use the correct function!
+  }
+  
   if(wordrank < lowercutoffno){value=word}      //MAYBE THIS FILTERING MIGHT BE BETTER BEFORE
   if(wordrank > uppercutoffno){value=word}      //CALLING THE DATABASE TO REDUCE TIME?
  statement.reset;
+ 
+ value=revertToOriginalCase(value,ceys);
+ 
  return value;
 }
 
 function augmentWord(word){
   value=DictionaryEntry(word);
+  //alert("func\tDictionaryEntry\n param words= " + word);
+ 
   if(typeof(value)=="undefined"){value="#@###"+word} else {
         if(!(layout=='db-InverseGlossLayout')){value=removeShit(addSuperScripts(greySilentLetters(value)));}
           }
@@ -92,7 +106,7 @@ function augmentWord(word){
  }
 
 function go(){
-  window.opener.content.document.location.reload();
+  //window.opener.content.document.location.reload();
   //alert("GO THINKS scheme index is=" + schemeIndex);
   document.getElementById('db-Scheme').selectedIndex = schemeIndex;
   return newvalue;

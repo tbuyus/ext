@@ -6,7 +6,7 @@
 <window id="notation-window"  
    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" 
    xmlns:html="http://www.w3.org/1999/xhtml"        
-   title="English Augmenter" screenX="250" screenY="250" onload="go();" >
+   title="English Augmenter" screenX="550" screenY="550" onload="go();" >
   <script src="processIndividualWords.js"/>
   <script src="parseTextNodes.js"/>
   <script src="ipa.js"/>
