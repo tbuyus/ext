@@ -2,7 +2,7 @@ function parseTextNodes(page,func,processAtWordLevel)
 {
 //allows users to gradually add or remove transformed words based on
 //a window of word frequencies
-   window.opener.document.getElementById('statusbar-display').label='modifying notation...'; //THIS DOESNT WORK RIGHT
+//   window.opener.document.getElementById('statusbar-display').label='modifying notation...'; //THIS DOESNT WORK RIGHT
    lowercutoff= document.getElementById("db-LowerCutOff");
    uppercutoff= document.getElementById("db-UpperCutOff");
    lowercutofftext=lowercutoff.label;

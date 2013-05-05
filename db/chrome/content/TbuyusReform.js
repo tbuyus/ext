@@ -1,8 +1,8 @@
 function TidyTobsSchemeold(t){
-  // t = t.toLowerCase();
+   t = t.toLowerCase();
   // t = t.replace(/k/gi,"c");
   // t = t.replace(/x/gi,"ks");
-  // t = t.replace(/[áéíóúÁÉÍÓÚ]/g,"u");
+   t = t.replace(/[áéíóúÁÉÍÓÚ]/g,"u");
   // t = t.replace(/[àèìòùħÀÈÌÒÙĦ]/g,"");
   // t = t.replace(/[^0-9]0/g,"");
   // t = t.replace(/û/gi,"yw");
