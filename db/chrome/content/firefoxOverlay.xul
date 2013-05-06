@@ -6,7 +6,7 @@
 	 onload="alert('firefoxOverlay.xul has just loaded');">
   <script src="processIndividualWords.js"/>
   <script src="parseTextNodes.js"/>
-  <script src="ipa.js"/>
+  <script src="ipa-mapping.js"/>
   <script src="reform1.js"/>
   <script src="fonts.js"/>
   <script src="overlay.js"/> 
