@@ -11,8 +11,13 @@
   <script src="fonts.js"/>
   <script src="overlay.js"/> 
   <script src="foverlay.js"/> 
-  
-  <stringbundleset id="stringbundleset">
+  <script src="word-dependent-functions.js"/>   
+  <script src="non-word-dependent-mappings.js"/> 
+   <script src="audio.js"/> 
+   <script src="sqlite-dictionary-scripts.js"/> 
+  <script src="titlecase-uppercase-lowercase-functions.js"/> 
+
+    <stringbundleset id="stringbundleset">
     <stringbundle id="db-strings" src="chrome://db/locale/db.properties"/>
   </stringbundleset>
 

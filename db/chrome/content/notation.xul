@@ -13,6 +13,12 @@
   <script src="reform1.js"/>
   <script src="fonts.js"/>
   <script src="overlay.js"/>
+  <script src="word-dependent-functions.js"/> 
+  <script src="non-word-dependent-mappings.js"/> 
+  <script src="audio.js"/> 
+  <script src="sqlite-dictionary-scripts.js"/> 
+  <script src="titlecase-uppercase-lowercase-functions.js"/> 
+
   <vbox>
     <tabbox>
 	<tabs>
@@ -37,7 +43,7 @@
           <caption>&db.labelOptions;</caption>
           <radiogroup id="db-Options" >
            <radio id="db-LowerCutOff" accesskey="L" label="&db.labelLowerCutOff;: 0" oncommand="this.label='lower cut off: '+prompt('enter the lower cut off!');"/>
-           <radio id="db-UpperCutOff" accesskey="U" label="&db.labelUpperCutOff;: 200000" oncommand="this.label='upper cut off: '+prompt('enter the upper  cut off!');"/>
+           <radio id="db-UpperCutOff" accesskey="U" label="&db.labelUpperCutOff;: 200000" oncommand="this.label='upper cut off: '+prompt('enter the upper  cut off ubi!');"/>
           </radiogroup>
 	</groupbox>
 	<groupbox>
@@ -125,12 +131,8 @@
 
  </tabpanel>
     <tabpanel id="second">
-  
-
-  <vbox align="center">
-
-    <vbox align="center"> 
-        
+   <vbox align="center">
+    <vbox align="center">     
       <hbox align="left">
         <button id="db-b" label="b" oncommand="speak(event);"/>
         <button id="db-p" label="p" oncommand="speak(event);"/>
