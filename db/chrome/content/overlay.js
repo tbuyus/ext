@@ -7,7 +7,10 @@ var currentUpperCutoff=200000;
 function doScheme(scheme){
 beforewebpage="hello";
 //alert("the scheme you chose was"+scheme);
+
 loadedWebPage=  window.opener.content.document;
+//alert(loadedWebPage.documentElement.innerHTML + "\n\n new web page" + beforewebpage); 
+
 lowercutoff= document.getElementById("db-LowerCutOff");
 uppercutoff= document.getElementById("db-UpperCutOff");
  
@@ -24,6 +27,9 @@ switch(scheme){
      case "db-Tobs"         :
           parseTextNodes(loadedWebPage,ReformWord,1);
           break;                          
+     case "db-Freq"         :
+          parseTextNodes(loadedWebPage,FreqWord,1);
+          break;                          
       case "db-Blocks"         :
           addfont(smsfontdata);
           parseTextNodes(loadedWebPage,colorblocks,0);
@@ -31,7 +37,7 @@ switch(scheme){
                           }
 schemeIndex=document.getElementById('db-Scheme').selectedIndex;
 layoutIndex=  document.getElementById('db-Layout').selectedIndex;
-//alert(loadedWebPage.documentElement.innerHTML + "\n\n old web page" + beforewebpage); 
+//alert(loadedWebPage.documentElement.innerHTML + "\n\n new web page" + beforewebpage); 
 
 //prompt("tags",loadedWebPage.documentElement.innerHTML);
 //alert("DOSCHEME thinks schemeIndex and layoutIndex are:=" + schemeIndex + ", and " + layoutIndex +" respectively"); 

@@ -3,6 +3,7 @@
 <!ENTITY db.labelRemoveInternalVowelsNow "No Vow0els">
 <!ENTITY db.labelBlocksNow "Colored Blocks1">
 <!ENTITY db.labelTobsNow "Reform 1">
+<!ENTITY db.labelFreq "Frequency">
 <!ENTITY db.labelNotation "Notation">
 <!ENTITY db.labelAugmentNow "Augment">
 <!ENTITY db.labelScheme "Sch0eme">

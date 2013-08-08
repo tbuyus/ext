@@ -25,6 +25,32 @@ function DictionaryEntry(word){
  return value;
 }
 
+function DictionaryEntryFreq(word){
+  
+  ceys=wordCase(word);
+  word=word.toLowerCase();
+  value=word;
+   
+//  alert("func\tDictionaryEntry\n param words= " + word);
+//  console.log("func\tprocessIndividualWords\t param somewords= " +somewords);
+
+  var statement =mDBConn.createStatement("SELECT * FROM dictionary where tradspell=?1");
+  statement.bindUTF8StringParameter(0, word);
+  
+  while (statement.executeStep()) {
+          var value =statement.getString(1);
+          var wordrank=statement.getString(2); // use the correct function!
+  }
+  
+  if(wordrank < lowercutoffno){value=word}      //MAYBE THIS FILTERING MIGHT BE BETTER BEFORE
+  if(wordrank > uppercutoffno){value=word}      //CALLING THE DATABASE TO REDUCE TIME?
+ statement.reset;
+ 
+ value=revertToOriginalCase(value,ceys);
+ 
+ return wordrank;
+}
+
 var file = Components.classes["@mozilla.org/file/directory_service;1"]
                     .getService(Components.interfaces.nsIProperties)
                     .get("ProfD", Components.interfaces.nsIFile);

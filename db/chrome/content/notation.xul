@@ -36,7 +36,8 @@
            <radio id="db-NoVowels" accesskey="V" label="&db.labelRemoveInternalVowelsNow;" /> 
            <radio id="db-Blocks" accesskey="B" label="&db.labelBlocksNow;" /> 
            <radio id="db-Tobs" accesskey="R" label="&db.labelTobsNow;" /> 
-        </radiogroup>
+           <radio id="db-Freq" accesskey="F" label="&db.labelFreq;" /> 
+         </radiogroup>
      </groupbox>
    <vbox>
      <groupbox>
@@ -157,7 +158,7 @@
    <vbox align="center"> 
 
     <hbox align="left">
-      <button id="db-f" label="fF" oncommand="speak(event);"/>
+      <button id="db-f" label="f F þ Þ" oncommand="speak(event);"/>
       <button id="db-h" label="hH" oncommand="speak(event);"/>
       <button id="db-s" label="s,ç" oncommand="speak(event);"/>
     </hbox>

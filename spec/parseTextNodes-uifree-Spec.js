@@ -1,5 +1,5 @@
  
-describe("parseTextNodes-uifree", function(){
+describe("parseTextNodesUIfree", function(){
   
     it("should change 'enrico' to titlecase ('Enrico') ", function (){
       expect(revertToOriginalCase("enrico","titlecase")).toBe("Enrico");
