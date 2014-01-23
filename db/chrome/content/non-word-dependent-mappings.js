@@ -17,7 +17,8 @@ return t.replace(/([^ ])([aeiou][aeiou]*)/gi,"$1");
 }
 
 function greySilentLetters(txt){
-            return txt.replace(/([a-zA-Z])0/g,"<font color=\"gray\">$1<\/font>");
+            txt=txt.replace(/([^0-9,])0/g,"<font color=\"gray\">$1<\/font>");
+            return txt.replace(/([àèìòùħ])/g,"<font color=\"gray\">$1<\/font>");
 }
 function addSuperScripts(txt){
       return txt.replace(/[!]([^ ]*)/g,"<sup>$1</sup>");      
@@ -28,3 +29,8 @@ function removeShit(txt){
      return txt.replace(/(ør?)\#/g,"$1");
 
  }
+ 
+function fives(txt){
+  txt=txt.replace(/^(zbde)/g,"Ò^$1");
+  return txt;
+}

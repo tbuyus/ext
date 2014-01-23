@@ -46,9 +46,11 @@ function FreqWord(word){
 //  var green=mincolorval + parseInt(fcolour*scaling);
 //  var blue=mincolorval + parseInt(fcolour*scaling);
   
-  var red=mincolorval + parseInt(fcolour*scaling);
+  var red=255 - parseInt(fcolour*scaling);
+//  var red=mincolorval + parseInt(fcolour*scaling);
   var green=mincolorval + parseInt(fcolour*scaling);
-  var blue=mincolorval + parseInt(fcolour*scaling);
+//  var blue=mincolorval + parseInt(fcolour*scaling);
+  var blue=0;
 
   if(wordrank>=cutoffRank){value="<SPAN style=\"background-color:rgb("+red+","+green+","+blue +");\"" + " title=\"" + fcolour + "\">" + value + "</SPAN>"}
 
