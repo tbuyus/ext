@@ -100,13 +100,13 @@
     </hbox>
 
     <hbox align="left">
-     <button id="db-idots" label="ê,ï,ɥ " oncommand="speak(event);"/>
+     <button id="db-idots" label="ê,ï,ý" oncommand="speak(event);"/>
      <button id="db-eI" label="â" oncommand="speak(event);"/>
     </hbox>
 
    <hbox align="left">
      <button id="db-aI" label="î,ŷ" oncommand="speak(event);"/>
-     <button id="db-OI" label="ǒ" oncommand="speak(event);"/>
+     <button id="db-OI" label="σ" oncommand="speak(event);"/>
     </hbox>
 
      <hbox align="left">
@@ -165,7 +165,7 @@
 
     <hbox align="left">
       <button id="db-SS" label="ŝ,ţ" oncommand="speak(event);"/>   
-      <button id="db-TT" label="ҭ" oncommand="speak(event);"/>
+      <button id="db-TT" label="π" oncommand="speak(event);"/>
       <button id="db-DD" label="τ" oncommand="speak(event);"/>
     </hbox>
 
@@ -179,7 +179,7 @@
    <vbox align="center"> 
 
     <hbox align="left">
-      <button id="db-j" label="y,ǐ" oncommand="speak(event);"/>
+      <button id="db-j" label="y,ĩ" oncommand="speak(event);"/>
       <button id="db-l" label="l L" oncommand="speak(event);"/>
       <button id="db-m" label="m M" oncommand="speak(event);"/>
   
@@ -189,7 +189,7 @@
       <button id="db-n" label="n N" oncommand="speak(event);"/>
       <button id="db-NN" label="ñ" oncommand="speak(event);"/>   
       <button id="db-r" label="r R" oncommand="speak(event);"/>
-      <button id="db-w" label="w,ǔ" oncommand="speak(event);"/>
+      <button id="db-w" label="w,υ" oncommand="speak(event);"/>
     </hbox>
 
  
