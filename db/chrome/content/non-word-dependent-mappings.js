@@ -26,7 +26,8 @@ function addSuperScripts(txt){
 
 function removeShit(txt){
     txt = txt.replace(/o\#/g,"o");  //tomeytoe/tomartoe DIALECT WOES
-     return txt.replace(/(ør?)\#/g,"$1");
+         txt = txt.replace(/\#/g,""); 
+	 return txt.replace(/(ør?)\#/g,"$1");
 
  }
  
