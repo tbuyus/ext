@@ -1,7 +1,9 @@
  // USED BY IPA/REFORM/ & AUGMENT FUNCTIONS - (PRONUNCIATION DEPENDENT SCHEMES)
 function DictionaryEntry(word){
-  
+ 
   ceys=wordCase(word);
+ //   alert("Value before:="+word+"\nCeys:="+ceys);
+
   word=word.toLowerCase();
   value=word;
    
@@ -19,9 +21,9 @@ function DictionaryEntry(word){
   if(wordrank < lowercutoffno){value=word}      //MAYBE THIS FILTERING MIGHT BE BETTER BEFORE
   if(wordrank > uppercutoffno){value=word}      //CALLING THE DATABASE TO REDUCE TIME?
  statement.reset;
- 
+ value=value.replace(/ /g,"");
  value=revertToOriginalCase(value,ceys);
- 
+//alert("Value after:="+value+"\nCeys:="+ceys);
  return value;
 }
 

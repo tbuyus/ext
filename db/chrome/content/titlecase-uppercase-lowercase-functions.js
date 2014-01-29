@@ -9,11 +9,13 @@ function revertToOriginalCase(lcword,wcase){
           word=lcword.toUpperCase();
           return(word);
           break
-         case "titlecase":
+         case "titlecase": 
           letter1=lcword.charAt(0);
-          letter1=letter1.toUpperCase();
+          letter1Upper=letter1.toUpperCase();
+	 
           rest=lcword.substr(1,wordlength-1);
-          word=letter1+rest;
+          word=letter1Upper+rest;
+//	  alert("titlecase"+"\nletter1:="+letter1+"\nletter1Upper;="+letter1Upper+"rest:="+rest+"\nword:="+word);
           return(word);
           break
          default:
