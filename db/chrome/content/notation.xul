@@ -83,42 +83,42 @@
          <description>&db.labelSilentLetters;</description>
          <button id="db-lcurly" label="èìòùħ-(&db.labelGrey;)"/>
          <description>&db.labelSchwa;</description>
-        <button id="db-@" label="á,é,í,ó,ú" oncommand="speak(event);"/>
+        <button id="db-@" label="áéíóú" oncommand="speak(event);"/>
       </hbox>  
 
  
     <hbox align="left">
       <button id="db-lcurly" label="a" oncommand="speak(event);"/>
-      <button id="db-e" label="e,ã" oncommand="speak(event);"/>
-      <button id="db-I" label="i,ė,ų" oncommand="speak(event);"/>
+      <button id="db-e" label="eã" oncommand="speak(event);"/>
+      <button id="db-I" label="iėų" oncommand="speak(event);"/>
     </hbox>  
   
     <hbox align="left">
      <button id="db-o" label="o" oncommand="speak(event);"/>
-     <button id="db-VV" label="u,ő" oncommand="speak(event);"/>
-     <button id="db-UU" label="ō,ū" oncommand="speak(event);"/>
+     <button id="db-VV" label="uő" oncommand="speak(event);"/>
+     <button id="db-UU" label="ōū" oncommand="speak(event);"/>
     </hbox>
 
     <hbox align="left">
-     <button id="db-idots" label="ê,ï,ý" oncommand="speak(event);"/>
+     <button id="db-idots" label="êïý" oncommand="speak(event);"/>
      <button id="db-eI" label="â" oncommand="speak(event);"/>
     </hbox>
 
    <hbox align="left">
-     <button id="db-aI" label="î,ŷ" oncommand="speak(event);"/>
+     <button id="db-aI" label="îŷ" oncommand="speak(event);"/>
      <button id="db-OI" label="σ" oncommand="speak(event);"/>
     </hbox>
 
      <hbox align="left">
-     <button id="db-udots" label="ö,ü,ë-û" oncommand="speak(event);"/>
-     <button id="db-@U" label="ô Ô" oncommand="speak(event);"/>
+     <button id="db-udots" label="öüë-û" oncommand="speak(event);"/>
+     <button id="db-@U" label="ô" oncommand="speak(event);"/>
      <button id="db-aU" label="õ" oncommand="speak(event);"/>
     </hbox>
  
     <hbox align="left">
      <button id="db-3dots" label="ŕ" oncommand="speak(event);"/>
      <button id="db-Adots" label="āĀ" oncommand="speak(event);"/>
-     <button id="db-Odots" label="ø,åÅ" oncommand="speak(event);"/>
+     <button id="db-Odots" label="øåÅ" oncommand="speak(event);"/>
     </hbox>
 
     <hbox align="left">
@@ -135,43 +135,43 @@
    <vbox align="center">
     <vbox align="center">     
       <hbox align="left">
-        <button id="db-b" label="b B" oncommand="speak(event);"/>
-        <button id="db-p" label="p P" oncommand="speak(event);"/>
-        <button id="db-t" label="t T,ð" oncommand="speak(event);"/>
+        <button id="db-b" label="bB" oncommand="speak(event);"/>
+        <button id="db-p" label="p" oncommand="speak(event);"/>
+        <button id="db-t" label="tTð" oncommand="speak(event);"/>
       </hbox>
 
      <hbox  align="left">
-       <button id="db-d" label="d D" oncommand="speak(event);"/>
-       <button id="db-g" label="g  G" oncommand="speak(event);"/>
-       <button id="db-k" label="k K, c C" oncommand="speak(event);"/>
+       <button id="db-d" label="dD" oncommand="speak(event);"/>
+       <button id="db-g" label="gG" oncommand="speak(event);"/>
+       <button id="db-k" label="kc" oncommand="speak(event);"/>
      </hbox>
     
    </vbox>
         
     <hbox  align="left">
 
-     <button id="db-tS" label="ĉ, ť" oncommand="speak(event);"/>
-     <button id="db-dZ" label="j, ĝ" oncommand="speak(event);"/>
+     <button id="db-tS" label="ĉť" oncommand="speak(event);"/>
+     <button id="db-dZ" label="jĝ" oncommand="speak(event);"/>
 
     </hbox>
    
    <vbox align="center"> 
 
     <hbox align="left">
-      <button id="db-f" label="f F, þ Þ" oncommand="speak(event);"/>
-      <button id="db-h" label="h H" oncommand="speak(event);"/>
-      <button id="db-s" label="s S,ç" oncommand="speak(event);"/>
+      <button id="db-f" label="fFþ" oncommand="speak(event);"/>
+      <button id="db-h" label="hH" oncommand="speak(event);"/>
+      <button id="db-s" label="sç" oncommand="speak(event);"/>
     </hbox>
 
     <hbox align="left">
-      <button id="db-SS" label="ŝ,ţ" oncommand="speak(event);"/>   
+      <button id="db-SS" label="ŝţ" oncommand="speak(event);"/>   
       <button id="db-TT" label="π" oncommand="speak(event);"/>
       <button id="db-DD" label="τ" oncommand="speak(event);"/>
     </hbox>
 
     <hbox align="left">
-      <button id="db-v" label="v V,ƒ" oncommand="speak(event);"/>
-      <button id="db-z" label="z, ś" oncommand="speak(event);"/>
+      <button id="db-v" label="v" oncommand="speak(event);"/>
+      <button id="db-z" label="zś" oncommand="speak(event);"/>
       <button id="db-ZZ" label="zye" oncommand="speak(event);"/>
     </hbox>
 
@@ -179,17 +179,17 @@
    <vbox align="center"> 
 
     <hbox align="left">
-      <button id="db-j" label="y,ĩ" oncommand="speak(event);"/>
-      <button id="db-l" label="l L" oncommand="speak(event);"/>
-      <button id="db-m" label="m M" oncommand="speak(event);"/>
+      <button id="db-j" label="yĩ" oncommand="speak(event);"/>
+      <button id="db-l" label="lL" oncommand="speak(event);"/>
+      <button id="db-m" label="mM" oncommand="speak(event);"/>
   
    </hbox>
 
     <hbox align="left">
-      <button id="db-n" label="n N" oncommand="speak(event);"/>
+      <button id="db-n" label="nN" oncommand="speak(event);"/>
       <button id="db-NN" label="ñ" oncommand="speak(event);"/>   
-      <button id="db-r" label="r R" oncommand="speak(event);"/>
-      <button id="db-w" label="w,υ" oncommand="speak(event);"/>
+      <button id="db-r" label="rR" oncommand="speak(event);"/>
+      <button id="db-w" label="wυ" oncommand="speak(event);"/>
     </hbox>
 
  

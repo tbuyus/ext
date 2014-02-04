@@ -5,7 +5,7 @@ function DictionaryEntry(word){
  //   alert("Value before:="+word+"\nCeys:="+ceys);
 
   word=word.toLowerCase();
-  value=word;
+  value=word+"*";
    
 //  alert("func\tDictionaryEntry\n param words= " + word);
 //  console.log("func\tprocessIndividualWords\t param somewords= " +somewords);
