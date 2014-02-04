@@ -30,6 +30,13 @@ function removeShit(txt){
 	 return txt.replace(/(ør?)\#/g,"$1");
 
  }
+
+ 
+function identifyHeteronyms(txt){
+    return txt.replace(/([^ ]*)\-\-HETERONYM\-\-([^ ]*)/g,"\n<button onclick=\"dv=this;dv.parentNode.removeChild(dv);\">$1</button>\n<button onclick=\"dv=this;dv.parentNode.removeChild(dv);\">$2</button>");  
+	 
+
+ } 
  
 function fives(txt){
   txt=txt.replace(/^(zbde)/g,"Ò^$1");

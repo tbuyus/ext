@@ -3,7 +3,7 @@
   //alert("func\tDictionaryEntry\n param words= " + word);
  
   if(typeof(value)=="undefined"){value="#@###"+word} else {
-        if(!(layout=='db-InverseGlossLayout')){value=removeShit(greySilentLetters(addSuperScripts(value)));}
+        if(!(layout=='db-InverseGlossLayout')){value=removeShit(greySilentLetters(addSuperScripts(identifyHeteronyms(value))));}
           }
   //if(typeof(wordrank)=="undefined"){wordrank=1*400000} 
   if(word.match(/[a-z][a-z][a-z]*/)){value=value.replace(/\#\@\#\#\#/,"/")}
