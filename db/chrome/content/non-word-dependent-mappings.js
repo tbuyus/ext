@@ -1,12 +1,16 @@
 function colorblocks(text)
 {  
-text=text.replace(/([A-Z])/g,  "·$1");
+//text=text.replace(/([A-Z])/g,  "·$1");
 text=text.toLowerCase();
 tit=text.toUpperCase();
-text=text.replace(/([adgjmptw])/g,"<SPAN CLASS='SMS1'>$1</SPAN>");
-text=text.replace(/([behknqruxy])/g,"<SPAN CLASS='SMS2'>$1</SPAN>");
-text=text.replace(/([cfilosvz])/g,  "<SPAN CLASS='SMS3'>$1</SPAN>");
-text="<SPAN CLASS='SMS' TITLE='"+tit+"'>"+text+"</SPAN>";    
+text=text.replace(/([adgjmptwADGJMPTW])/g,"<#£#£#£#££#1'>$1</#£#£#£#££>");
+text=text.replace(/([behknqruxyBEHKNQRUXY])/g,"<#£#£#£#££#2'>$1</#£#£#£#££>");
+text=text.replace(/([cfilosvzCFILOSVZ])/g,  "<#£#£#£#££#3'>$1</#£#£#£#££>");
+text=text.replace(/\#\£\#\£\#\£\#\£\£\#/g,"SPAN CLASS='SMS");
+text=text.replace(/\#\£\#\£\#\£\#\£\£/g,"\SPAN");
+
+tit=tit.replace(/\"/g,"&quot;");
+text="<SPAN CLASS='SMS' TITLE=\""+tit+"\">"+text+"</SPAN>";    
           
 return text;
   }

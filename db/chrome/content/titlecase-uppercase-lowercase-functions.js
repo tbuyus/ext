@@ -28,13 +28,19 @@ function revertToOriginalCase(lcword,wcase){
 //IS THIS REALLY THE MOST EFFICIENT WAY TO ACHIEVE THIS?
 function wordCase(t){
    // alert("hi from word case");
-  output="not sure yet";
-  tlength=t.length;
-  firstletter=t.charAt(0);
-  lastletter=t.charAt(tlength-1);
-  if(firstletter.match(/[A-Z]/)){
+  var output="not sure yet";
+  var tlength=t.length;
+  var firstletter=t.charAt(0);
+  var lastletter=t.charAt(tlength-1);
+  var secondlastletter=t.charAt(tlength-2);
+  if( lastletter.match("0")){
+    lastletter = secondlastletter;
+}
+  
+    
+  if(firstletter.match(/[A-ZÀÈÌÒÙĦÃĖŲŐŌŪÊÏÝÂÎŶÖÜËÛÔÕŔĀØÅÐĈŤĜÞÇŜŢΠΤŚĨÑΥÁÉÍÓÚ]/)){
     output="uppercase";
-    if (tlength > 1){if (lastletter.match(/[a-z]/)){ output="titlecase"}}
+    if (tlength > 1){if (lastletter.match(/[a-zàèìòùħãėųőōūêïýâîŷöüëûôõŕāøåðĉťĝþçŝţπτśĩñυáéíóú]/)){ output="titlecase"}}
   }
   else output="lowercase";
 //alert(output);

@@ -81,7 +81,7 @@
   <vbox align="center">
       <hbox align="left">
          <description>&db.labelSilentLetters;</description>
-         <button id="db-lcurly" label="èìòùħ-(&db.labelGrey;)"/>
+         <button id="db-lcurly" label="àèìòùħ-(&db.labelGrey;)"/>
          <description>&db.labelSchwa;</description>
         <button id="db-@" label="áéíóú" oncommand="speak(event);"/>
       </hbox>  
