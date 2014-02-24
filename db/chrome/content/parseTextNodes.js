@@ -51,7 +51,7 @@ function parseTextNodes(page,func,processAtWordLevel)
                                                           //ALLOWS ME TO ACCESS PARENTNODE IN SENSIBLE FASHION
       if(layout=="db-ColumnsLayout"){                     //ADDS COLUMNS LAYOUT IF CHOSEN
             var newnode=page.createElement("span");
-           newnode.innerHTML="<TABLE ALIGN='CENTER' RULES='COLS' CELLSPACING='0' ><TR><TD>"+newText+"</TD><TD>"+oldText+"</TD></TR></TABLE>";} else
+           newnode.innerHTML="\n<TABLE ALIGN='CENTER'  CELLSPACING='3%' >\n<TR>\n<TD WIDTH='38%'>"+newText+"</TD>\n<TD WIDTH='50%'>"+oldText+"</TD></TR></TABLE>";} else
       {newnode.innerHTML=newText;}                       // IS THIS FREAKING THE REVIEWERS, ALLOWING INJECTION/
                                                          // CORRUPTION. AN (UN?)ESCAPED MARKUP INTERFERENCE THREAT?
                                                          // CAUSE OF ALLEGEDED UN-NECESSARY REPAINT - OR WAS

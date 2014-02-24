@@ -3,44 +3,45 @@ function TidyTobsScheme(t){
      i=t;
      t = t.toLowerCase();
      t = t.replace(/ /g,"");
-     t=t.replace(/[a-z]0/g,"");
+     t=t.replace(/[a-zãėųőōūêïýâîŷöüëûôõŕāøåðĉťĝþçŝţπτśĩñυáéíóú]0/g,"");
      
-       t = t.replace(/^muy$/gi,"m"); 
+       t = t.replace(/^muy$/g,"m"); 
 
-       t = t.replace(/^m[ŷê]$/gi,"m"); 
-       t = t.replace(/^iś$/gi,"z");       
-	t = t.replace(/^had$/gi,"d");
-	t = t.replace(/^of\!uv$/gi,"v"); 
-       t = t.replace(/^and$/gi,"n"); 
-       t = t.replace(/^î$/gi,"I"); 
-       t = t.replace(/^før\#$/gi,"f"); 
-        t = t.replace(/^hê$/gi,"e"); 
-        t = t.replace(/^bê$/gi,"b"); 
-        t = t.replace(/^can$/gi,"C"); 
-         t = t.replace(/^was\!woś$/gi,"w"); 
-         t = t.replace(/^havè$/gi,"h"); 
-         t = t.replace(/^just$/gi,"j"); 
-         t = t.replace(/^pūt$/gi,"p"); 
-         t = t.replace(/^ārè$/gi,"r"); 
-         t = t.replace(/^ŝħê$/gi,"s"); 
-         t = t.replace(/^tö$/gi,"t"); 
-         t = t.replace(/^up$/gi,"u"); 
-         t = t.replace(/^yöù$/gi,"y"); 
-         t = t.replace(/^lîkè$/gi,"l"); 
-        t = t.replace(/^cōùd$/gi,"k"); 
-        t = t.replace(/^get$/gi,"g"); 
+       t = t.replace(/^m[ŷê]$/g,"m"); 
+       t = t.replace(/^iś$/g,"z");       
+	t = t.replace(/^had$/g,"d");
+	t = t.replace(/^of\!uv$/g,"v"); 
+       t = t.replace(/^and$/g,"n"); 
+       t = t.replace(/^î$/g,"I"); 
+       t = t.replace(/^før\#$/g,"f"); 
+        t = t.replace(/^hê$/g,"e"); 
+        t = t.replace(/^bê$/g,"b"); 
+        t = t.replace(/^can$/g,"C"); 
+         t = t.replace(/^was\!woś$/g,"w"); 
+         t = t.replace(/^havè$/g,"h"); 
+         t = t.replace(/^just$/g,"j"); 
+         t = t.replace(/^pūt$/g,"p"); 
+         t = t.replace(/^ārè$/g,"r"); 
+         t = t.replace(/^ŝħê$/g,"s"); 
+         t = t.replace(/^tö$/g,"t"); 
+         t = t.replace(/^up$/g,"u"); 
+         t = t.replace(/^yöù$/g,"y"); 
+         t = t.replace(/^lîkè$/g,"l"); 
+        t = t.replace(/^cōùd$/g,"k"); 
+        t = t.replace(/^get$/g,"g"); 
+        t = t.replace(/^ør\#$/g,"or"); 
    
      
-     t = t.replace(/ār/gi,"r");
-     t = t.replace(/ā/gi,"r");
+     t = t.replace(/ār/g,"r");
+     t = t.replace(/ā/g,"r");
      t = t.replace(/ør/g,"r");
      t = t.replace(/ø/g,"r");
      
      
      t = t.replace(/c/g,"k");
-     t = t.replace(/x/gi,"ks");
+     t = t.replace(/x/g,"ks");
      t = t.replace(/ã/g,"e");
-     t = t.replace(/[ė]/g,"i");
+     t = t.replace(/[ėų]/g,"i");
      t = t.replace(/y/g,"Y");
      t = t.replace(/[wǔ]/g,"W");
  
@@ -59,8 +60,8 @@ function TidyTobsScheme(t){
 
    
 //     t = t.replace(/([^$])[àèìòùÀÈÌÒÙ]/g,"$1");
-     t = t.replace(/û/gi,"yw"); 
-     t= t.replace(/ŕ/gi,"r");
+     t = t.replace(/û/g,"yw"); 
+     t= t.replace(/ŕ/g,"ur");
  
      t = t.replace(/r#/g,"r");
      t=t.replace(/[^ !]*\!/g,"");
@@ -71,40 +72,41 @@ function TidyTobsScheme(t){
      t = t.replace(/[õÕ]/g,"aw");
      t = t.replace(/ô/g,"uw");
      t = t.replace(/ōū/g,"u");
-    t = t.replace(/[ōū]/gi,"u");
-   //  t = t.replace(/[ŷ]/gi,"ui");
-   //  t = t.replace(/ŕ/gi,"er");
+    t = t.replace(/[ōū]/g,"u");
+   //  t = t.replace(/[ŷ]/g,"ui");
+   //  t = t.replace(/ŕ/g,"er");
      t = t.replace(/å/g,"o");
      t = t.replace(/öö/g,"ew");
      t = t.replace(/öü/g,"ew");
      t = t.replace(/[öüë]/g,"ew");
-     t = t.replace(/[ǒσ]/gi,"oy");
-    t = t.replace(/ð/gi,"t");
-     t = t.replace(/τ/gi,"th");
+     t = t.replace(/[ǒσ]/g,"oy");
+    t = t.replace(/ð/g,"t");
+     t = t.replace(/τ/g,"dh");
      
-     t = t.replace(/π/gi,"Ϯh");
-     t = t.replace(/qυ/gi,"kW");
-     t = t.replace(/ś/gi,"z");
-     t = t.replace(/ç/gi,"s");
-     t = t.replace(/ā/gi,"α");
-     t = t.replace(/ĝ/gi,"j");
-     t = t.replace(/ñ/gi,"q");
-     t = t.replace(/ƒ/gi,"v");
+     t = t.replace(/π/g,"th");
+     t = t.replace(/qυ/g,"kW");
+     t = t.replace(/q/g,"k");
+     t = t.replace(/ś/g,"z");
+     t = t.replace(/ç/g,"s");
+     t = t.replace(/ā/g,"α");
+     t = t.replace(/ĝ/g,"j");
+     t = t.replace(/ñ/g,"q");
+     t = t.replace(/ƒ/g,"v");
      t = t.replace(/þ/ig,"f");
 
-     t = t.replace(/([ţćŝ])/gi,"sh");
-    t = t.replace(/shsh/gi,"sh");
+     t = t.replace(/([ţćŝ])/g,"sh");
+    t = t.replace(/shsh/g,"sh");
     t = t.replace(/w/g,"w");
       t = t.replace(/[Wυ]/g,"w");
-      t = t.replace(/[Yŏ]/g,"y");
-      t = t.replace(/C/g,"cy");
+      t = t.replace(/[Yŏĩ]/g,"y");
+      t = t.replace(/C/g,"c");
 
-      t = t.replace(/([ĉť])/gi,"ch"); 
+      t = t.replace(/([ĉť])/g,"ch"); 
       t=t.replace(/[àèìòùħ]/g,"");
 
        front=t.substring(0,1);
        rest=t.substring(1);
-       rest=rest.replace(/[àèìòùħaeiou]/g,"");
+       rest=rest.replace(/[àèìòùħaeiou#]/g,"");
        f=front+rest;
        
       f=revertToOriginalCase(f,ceys);

@@ -37,7 +37,7 @@ function removeShit(txt){
 
  
 function identifyHeteronyms(txt){
-    return txt.replace(/([^ ]*)\-\-HETERONYM\-\-([^ ]*)/g,"\n<button onclick=\"dv=this;dv.parentNode.removeChild(dv);\">$1</button>\n<button onclick=\"dv=this;dv.parentNode.removeChild(dv);\">$2</button>");  
+    return txt.replace(/([^ ]*)\-(\-HETERONYM\-|\-htrnym\-|heterɔnjm)\-([^ ]*)/g,"\n<button onclick=\"dv=this;dv.parentNode.removeChild(dv);\">$1</button>\n<button onclick=\"dv=this;dv.parentNode.removeChild(dv);\">$3</button>");  
 	 
 
  } 

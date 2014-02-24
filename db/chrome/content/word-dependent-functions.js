@@ -16,7 +16,7 @@
  function IPAWord(word){
   value=DictionaryEntry(word);
   if(typeof(value)=="undefined"){value="#@###"+word} else {
-   value=TidyIPA(value);}
+   value=identifyHeteronyms(TidyIPA(value));}
   if(typeof(wordrank)=="undefined"){wordrank=1*400000} 
   if(word.match(/[a-z][a-z][a-z]*/)){value=value.replace(/\#\@\#\#\#/,"/")}
   value=value.replace(/\/pnccc/g,"pnccc");
@@ -62,7 +62,7 @@ function FreqWord(word){
  function ReformWord(word){
  value=DictionaryEntry(word);
   if(typeof(value)=="undefined"){value="#@###"+word} else {
-    value=TidyTobsScheme(value);} 
+    value=identifyHeteronyms(TidyTobsScheme(value));} 
  //   value=TidyIPA(value);} 
   if(typeof(wordrank)=="undefined"){wordrank=1*400000} 
   if(word.match(/[a-z][a-z][a-z]*/)){value=value.replace(/\#\@\#\#\#/,"/")}
