@@ -18,7 +18,9 @@ function DictionaryEntry(word){
           var wordrank=statement.getString(2); // use the correct function!
   }
   
-  if(wordrank < lowercutoffno){value=word}      //MAYBE THIS FILTERING MIGHT BE BETTER BEFORE
+//  if(wordrank < lowercutoffno){value=word+"·"}      //MAYBE THIS FILTERING MIGHT BE BETTER BEFORE
+//  if(wordrank > uppercutoffno){value=word+"···"}      //CALLING THE DATABASE TO REDUCE TIME?
+  if(wordrank < lowercutoffno){value=word}      //CALLING THE DATABASE TO REDUCE TIME?
   if(wordrank > uppercutoffno){value=word}      //CALLING THE DATABASE TO REDUCE TIME?
  statement.reset;
  value=value.replace(/ /g,"");

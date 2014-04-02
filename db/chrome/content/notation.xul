@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
 <?xml-stylesheet href="chrome://db/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://db/locale/db.dtd"> 
 
-<!DOCTYPE overlay SYSTEM "chrome://db/locale/db.dtd">
-<window id="notation-window"  
-   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" 
+<window id="notation-window"  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" 
    xmlns:html="http://www.w3.org/1999/xhtml"        
-   title="English Augmenter" screenX="550" screenY="550" onload="go();" >
+   title="English Augmenter"  onload="go();" >
   <script src="processIndividualWords.js"/>
   <script src="parseTextNodes.js"/>
   <script src="ipa.js"/>
@@ -44,7 +43,7 @@
           <caption>&db.labelOptions;</caption>
           <radiogroup id="db-Options" >
            <radio id="db-LowerCutOff" accesskey="L" label="&db.labelLowerCutOff;: 0" oncommand="this.label='lower cut off: '+prompt('enter the lower cut off!');"/>
-           <radio id="db-UpperCutOff" accesskey="U" label="&db.labelUpperCutOff;: 200000" oncommand="this.label='upper cut off: '+prompt('enter the upper  cut off ubi!');"/>
+           <radio id="db-UpperCutOff" accesskey="U" label="&db.labelUpperCutOff;: 200000" oncommand="this.label='upper cut off: '+prompt('enter the upper  cut off');"/>
           </radiogroup>
 	</groupbox>
 	<groupbox>

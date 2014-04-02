@@ -36,7 +36,7 @@ function TidyIPA(t){
   t= t.replace(/ç/gi,"s");
    t= t.replace(/ā/gi,"ɑː");
   t= t.replace(/[ĝj]/gi,"dʒ");
-    t= t.replace(/y/gi,"j");
+    t= t.replace(/[ĩy]/gi,"j");
     t= t.replace(/û/gi,"juː");
     t= t.replace(/ñ/gi,"ɳ");
   t= t.replace(/x/gi,"ks");

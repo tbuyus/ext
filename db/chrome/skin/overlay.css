@@ -23,8 +23,8 @@ font-weight: bold;
 .sms,.sms1,.sms2,.sms3 {
    font-family: "SMS-a-betRegular" , sans !important;font-size : 25px !important;
      }
-.sms1 {color:#9955FF;}
-.sms2 {color:#444444;}
+.sms1 {color:#FF0000;}
+.sms2 {color:#222222;}
 .sms3 {color:#0000FF;}
 
 groupbox  { border : solid;
@@ -32,7 +32,7 @@ groupbox  { border : solid;
 		    border-width:1px;
 	}
 button, tabs {
-                   font-size:22px;
+                   font-size:14px;
 }	   
 	
 	
