@@ -1,8 +1,8 @@
-<!ENTITY db.labelToggle "Togg0le0 Text Augmentation">
+<!ENTITY db.labelToggle "Toggle Text Augmentation">
 <!ENTITY db.labelIPANow "IPA Approx. ">
-<!ENTITY db.labelRemoveInternalVowelsNow "No Vow0els">
+<!ENTITY db.labelRemoveInternalVowelsNow "No Vowels">
 <!ENTITY db.labelBlocksNow "Colored Blocks1">
-<!ENTITY db.labelTobsNow "Reform 1">
+<!ENTITY db.labelTobsNow "Abjad">
 <!ENTITY db.labelFreq "Frequency">
 <!ENTITY db.labelNotation "Notation">
 <!ENTITY db.labelAugmentNow "Augment">
@@ -29,10 +29,10 @@
 <!ENTITY db.labelConsonants "Consonants">
 <!ENTITY db.labelSilentLetters "Silent Letters">
 <!ENTITY db.labelGrey "Grey">
-<!ENTITY db.labelSchwa "Schwa">
+<!ENTITY db.labelSchwa "Schwa-Clipped Vowels">
 <!ENTITY db.labelKey "Key">
-<!ENTITY db.labelGO "GO!">
-<!ENTITY db.labelRESET "RESET!">
+<!ENTITY db.labelGO "Go!">
+<!ENTITY db.labelRESET "Reset!">
 
 
 

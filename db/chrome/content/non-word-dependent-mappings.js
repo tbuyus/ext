@@ -33,7 +33,7 @@ function removeShit(txt){
          txt = txt.replace(/\#/g,""); 
 	 return txt.replace(/(ør?)\#/g,"$1");
 
- }
+}
 
  
 function identifyHeteronyms(txt){

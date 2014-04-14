@@ -20,8 +20,8 @@ newstyle='<style type=text/css>\n' +
    'src: url(data:font/truetype;charset=utf-8;base64,' + fontdata + ')\nformat("truetype");\n' + 
    '\t\tfont-weight: bold;\n }\n\n '+ 
      '.SMS,.SMS1,.SMS2,.SMS3 {\n\tfont-family: "SMS-a-betRegular" , sans !important;font-size:23px;display:inline !important;}\n' +
-     '.SMS1 {\n\tcolor:#9955FF;}\n' +
-     '.SMS2 {\n\tcolor:#444444;}\n' +
+     '.SMS1 {\n\tcolor:#FF0000;}\n' +
+     '.SMS2 {\n\tcolor:#222222;}\n' +
      '.SMS3 {\n\tcolor:#0000FF;}\n' +
     '\n</style>';
 

@@ -27,14 +27,42 @@ font-weight: bold;
 .sms2 {color:#222222;}
 .sms3 {color:#0000FF;}
 
-groupbox  { border : solid;
+.silent {color:gray;}
+
+groupbox  { 
+                    border : solid;
 		    border-color: grey;
 		    border-width:1px;
 	}
-button, tabs {
-                   font-size:14px;
-}	   
-	
+
+button {
+                   font-size:15px;
+                   text-align:left;
+                   vertical-align:middle;
+                   margin:0;
+}
+.but {
+
+                   background-color:LightGreen;
+                   color:DarkRed;
+}
+
+hbox {
+
+                   margin:1px;
+                   padding:0;
+} 
+
+vbox
+{	   
+          	
+                   margin:1px
+                   padding:0;
+}
+tabs,tabbox,tabpanel,tabpanels,tab {
+          margin:1px;
+          padding:0;
+}	
 	
 	
 	
