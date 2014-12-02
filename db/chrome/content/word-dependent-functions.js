@@ -12,6 +12,22 @@
   return(value);
  }
  
+function RawWord(word){
+  value=DictionaryEntryRaw(word);
+  //alert("func\tDictionaryEntry\n param words= " + word);
+ 
+//  if(typeof(value)=="undefined"){value="#@###"+word} else {
+//        if(!(layout=='db-InverseGlossLayout')){value=removeShit(greySilentLetters(addSuperScripts(identifyHeteronyms(value))));}
+//          }
+  //if(typeof(wordrank)=="undefined"){wordrank=1*400000} 
+  if(word.match(/[a-z][a-z][a-z]*/)){value=value.replace(/\#\@\#\#\#/,"/")}
+  value=value.replace(/\/pnccc/g,"pnccc");
+  value=value.replace(/\#\@\#\#\#/,"");
+  return(value);
+ }
+ 
+ 
+ 
  
  function IPAWord(word){
   value=DictionaryEntry(word);

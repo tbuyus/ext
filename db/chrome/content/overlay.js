@@ -30,6 +30,9 @@ switch(scheme){
      case "db-Freq"         :
           parseTextNodes(loadedWebPage,FreqWord,1);
           break;                          
+     case "db-Raw"         :
+          parseTextNodes(loadedWebPage,RawWord,1);
+          break;                          
       case "db-Blocks"         :
           addfont(smsfontdata);
           parseTextNodes(loadedWebPage,colorblocks,0);
