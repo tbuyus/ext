@@ -72,7 +72,7 @@ function DictionaryEntryRaw(word){
  statement.reset;
  value=value.replace(/ /g,"");
  value=revertToOriginalCase(value,ceys);
- pairvalue=value + "\/\/"+ wordrank+"\/\/"+word;
+ pairvalue= "\/\/" + value + "\/\/" + wordrank + "\/\/" + word + "\/\/";
  return pairvalue;
 }
 
