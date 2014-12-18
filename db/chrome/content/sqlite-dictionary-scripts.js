@@ -1,4 +1,12 @@
  // USED BY IPA/REFORM/ & AUGMENT FUNCTIONS - (PRONUNCIATION DEPENDENT SCHEMES)
+function revertWackyUpperCaseLettersToLower(word){
+word=word.replace(/Σ/,"σ");
+word=word.replace(/Υ/,"υ");
+word=word.replace(/Τ/,"τ");
+word=word.replace(/Π/,"π");
+return word;
+}
+
 function DictionaryEntry(word){
  
   ceys=wordCase(word);
@@ -25,6 +33,7 @@ function DictionaryEntry(word){
  statement.reset;
  value=value.replace(/ /g,"");
  value=revertToOriginalCase(value,ceys);
+ value=revertWackyUpperCaseLettersToLower(value,ceys);
 //alert("Value after:="+value+"\nCeys:="+ceys);
  return value;
 }
@@ -72,6 +81,7 @@ function DictionaryEntryRaw(word){
  statement.reset;
  value=value.replace(/ /g,"");
  value=revertToOriginalCase(value,ceys);
+ value=revertWackyUpperCaseLettersToLower(value,ceys);
  word =revertToOriginalCase(word ,ceys);
  pairvalue= "\/\/" + value + "\/\/" + wordrank + "\/\/" + word + "\/\/";
  return pairvalue;
